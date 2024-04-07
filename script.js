@@ -11,6 +11,8 @@ const createGrid = (width) => {
     pixel.addEventListener("mouseover", (e) => {
       e.target.style.backgroundColor = "#eb6f92";
     });
+    pixel.style.flexBasis = `${100 / width}%`;
+    console.log(100 / width);
     container.appendChild(pixel);
   }
 };
@@ -23,7 +25,12 @@ const changeWidth = () => {
     );
   }
   console.log(newWidth);
-  const oldGrid = document.querySelectorAll("#pixel");
+  const oldGrid = document.querySelectorAll(".pixel");
+  oldGrid.forEach((item) => {
+    container.removeChild(item);
+  });
+  createGrid(newWidth);
+  button.textContent = `grid: ${newWidth}`;
 };
 
 createGrid(gridWidth);

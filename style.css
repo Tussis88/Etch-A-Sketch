@@ -29,7 +29,7 @@ body {
 }
 
 .pixel {
-  flex-basis: 6.25%;
+  /* flex-basis: 6.25%; */
   aspect-ratio: 1;
 }
 
