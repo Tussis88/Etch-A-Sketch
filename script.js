@@ -7,8 +7,7 @@ for (let i = 0; i < width; i++) {
   for (let j = 0; j < height; j++) {
     const pixel = document.createElement("div");
     pixel.className = "pixel";
-    pixel.style.borderStyle = "solid";
-    pixel.textContent = `w:${i}, h:${j}`;
+    // pixel.textContent = `${i}, ${j}`;
     container.appendChild(pixel);
   }
 }
