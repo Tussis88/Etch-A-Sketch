@@ -10,9 +10,9 @@ const createGrid = (width) => {
     pixel.className = "pixel";
     pixel.addEventListener("mouseover", (e) => {
       e.target.style.backgroundColor = "#eb6f92";
+      opacityChanger(e);
     });
     pixel.style.flexBasis = `${100 / width}%`;
-    console.log(100 / width);
     container.appendChild(pixel);
   }
 };
@@ -25,12 +25,20 @@ const changeWidth = () => {
     );
   }
   console.log(newWidth);
+  if (newWidth == null) newWidth = 16;
   const oldGrid = document.querySelectorAll(".pixel");
   oldGrid.forEach((item) => {
     container.removeChild(item);
   });
   createGrid(newWidth);
   button.textContent = `grid: ${newWidth}`;
+};
+
+const opacityChanger = (pixel) => {
+  let opacityValue = parseFloat(pixel.target.style.opacity || 0);
+  console.log(opacityValue);
+  if (opacityValue < 1) opacityValue += 0.1;
+  pixel.target.style.opacity = opacityValue.toString();
 };
 
 createGrid(gridWidth);
