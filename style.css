@@ -22,14 +22,13 @@ body {
 #container {
   display: flex;
   background-color: var(--alt-background);
-  width: 50vw;
+  width: 40%;
   flex-wrap: wrap;
   border: 1 solid var(--grid);
   box-shadow: 2px 4px 16px var(--shadow-color);
 }
 
 .pixel {
-  /* flex-basis: 6.25%; */
   aspect-ratio: 1;
 }
 
@@ -45,7 +44,7 @@ body {
   background-color: var(--alt-background);
   border: none;
   box-shadow: 2px 4px 16px var(--shadow-color);
-  padding: 8px 16px;
+  padding: 10px 20px;
 }
 
 #gridButton:hover {

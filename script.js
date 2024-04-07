@@ -24,7 +24,6 @@ const changeWidth = () => {
       `${newWidth} is not a valid value. You need to insert a number beetween 1 and 64`,
     );
   }
-  console.log(newWidth);
   if (newWidth == null) newWidth = 16;
   const oldGrid = document.querySelectorAll(".pixel");
   oldGrid.forEach((item) => {
@@ -36,7 +35,6 @@ const changeWidth = () => {
 
 const opacityChanger = (pixel) => {
   let opacityValue = parseFloat(pixel.target.style.opacity || 0);
-  console.log(opacityValue);
   if (opacityValue < 1) opacityValue += 0.1;
   pixel.target.style.opacity = opacityValue.toString();
 };
